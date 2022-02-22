@@ -1,6 +1,7 @@
 import argparse
 import os
 from log4shell_scanner.dep import jar
+from log4shell_scanner.log import log_detect
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Log4Shell Scanner")
@@ -9,6 +10,9 @@ def parse_arguments():
 
     jar_parser = subparsers.add_parser("jar")
     jar_parser.add_argument("--path", type=str, help="Path to jar file")
+
+    log_parser = subparsers.add_parser("log")
+    log_parser.add_argument("--path", type=str, help="Path to log file")
 
     args = vars(parser.parse_args())
 
@@ -21,6 +25,8 @@ def main(args: dict):
             if not os.path.exists("tmp/jar"):
                 os.mkdir("tmp/jar")
             jar.detect(args["path"], "tmp/jar")
+        case "log":
+            log_detect.scan_log(args["path"])
         case _:
             raise NotImplementedError
 
