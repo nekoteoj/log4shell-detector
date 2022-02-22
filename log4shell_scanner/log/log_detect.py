@@ -42,6 +42,5 @@ def scan_log(path: str):
                 print(f"Found vulnerability using pattern '{pattern}' after parsed {data[start_idx: end_idx + 1]} to {parsed} at position {start_idx}.")
                 found = True
         i = end_idx + 1
-        print(i)
     if not found:
         print("You application is safe! No Log4Shell vulnerability detected in the provided log file.")
