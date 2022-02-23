@@ -26,7 +26,11 @@ def main(args: dict):
     match mode:
         case "src":
             if src.gradle.is_gradle_project(args["path"]):
+                print("Detected gradle project.")
                 src.gradle.detect(args["path"])
+            elif src.maven.is_maven_project(args["path"]):
+                print("Detected maven project.")
+                src.maven.detect(args["path"])
             else:
                 print("Unsupported project structure: Project directory is not gradle or maven project!")
         case "jar":
