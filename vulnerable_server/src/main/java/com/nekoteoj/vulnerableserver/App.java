@@ -10,7 +10,7 @@ import org.apache.logging.log4j.core.config.*;
  */
 public class App {
 
-    private static final Logger logger = LogManager.getLogger(App.class);
+    private static final Logger logger = LogManager.getLogger("App");
 
     public static void main(String[] args) {
         Configurator.initialize(new DefaultConfiguration());
