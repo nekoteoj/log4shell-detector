@@ -1,5 +1,7 @@
 # Log4Shell Scanner
 
+![Alt text](/imgs/banner.png?raw=true "Project Banner")
+
 Log4Shell Scanner is a tool for checking Log4Shell vulnerability in Java-based web application. It provides these functionality
 - Dependency scanner for Gradle and Maven project
 - Dependency scanner for JAR artifact
