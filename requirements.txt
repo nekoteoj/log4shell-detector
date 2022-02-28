@@ -1,7 +1,9 @@
 aiofiles==0.8.0
 attrs==21.4.0
 Automat==20.2.0
+certifi==2021.10.8
 cffi==1.15.0
+charset-normalizer==2.0.12
 constantly==15.1.0
 cryptography==36.0.1
 httptools==0.4.0
@@ -16,6 +18,7 @@ pyasn1-modules==0.2.8
 pycparser==2.21
 pyOpenSSL==22.0.0
 pyparsing==3.0.7
+requests==2.27.1
 sanic==21.12.1
 sanic-routing==0.7.2
 service-identity==21.1.0
@@ -23,5 +26,6 @@ six==1.16.0
 Twisted==22.1.0
 twisted-iocpsupport==1.0.2
 typing_extensions==4.1.1
+urllib3==1.26.8
 websockets==10.2
 zope.interface==5.4.0

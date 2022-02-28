@@ -31,5 +31,5 @@ The compile artifact should be in `target/vulnerable_server-1.0-SNAPSHOT-jar-wit
 ## Running server
 
 ```
-java -jar vulnerable_server-1.0-SNAPSHOT-jar-with-dependencies.jar
+java -Dcom.sun.jndi.ldap.object.trustURLCodebase=true -jar vulnerable_server-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
