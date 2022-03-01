@@ -86,6 +86,21 @@ To run,
     ```
     For more information about each argument, please run `python scanner.py exploit --help`.
 
+## Screenshots
+
+Here are sample results from our tools
+
+1. Scanning java project directory
+![Alt text](/imgs/src_scan.png?raw=true "Source code scan result")
+
+2. Scanning java artifact file
+![Alt text](/imgs/jar_scan.png?raw=true "JAR scan result")
+
+3. Scanning log file
+![Alt text](/imgs/log_scan.png?raw=true "Log scan result")
+
+4. Exploit simulation
+![Alt text](/imgs/exploit_scan.png?raw=true "Exploit proof-of-concept result")
 ## Contributors
 
 - Pisit Wajanasara (nekoteoj)
