@@ -29,6 +29,9 @@ def find_maven_executable(path: str):
     exe = which("mvn")
     if exe is not None:
         return exe
+    exe = which("mvn.cmd")
+    if exe is not None:
+        return exe
     return ""
 
 def detect(path: str):
@@ -46,7 +49,7 @@ def detect(path: str):
         line = line.lower()
         if "log4j" in line:
             print(f"Found Log4j at dependency line: {line}")
-            candidates = re.findall(r"[0-9]+.[0-9]+.[0-9]+", line)
+            candidates = re.findall(r"[0-9]+\.[0-9]+\.[0-9]+", line)
             for candidate in candidates:
                 if is_vulnerable_version(candidate):
                     print(f"Found vulnerable Log4 version: {candidate}!")
